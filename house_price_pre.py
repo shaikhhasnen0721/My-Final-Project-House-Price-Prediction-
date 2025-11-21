@@ -3,9 +3,6 @@ import pandas as pd
 import numpy as np
 import json
 import pickle
-import matplotlib.pyplot as plt
-import matplotlib
-matplotlib.rcParams["figure.figsize"] = (20,10)
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import ShuffleSplit
@@ -229,4 +226,5 @@ columns = {
     'data_columns' : [col.lower() for col in X.columns]
 }
 with open("columns.json","w") as f:
+
     f.write(json.dumps(columns))
